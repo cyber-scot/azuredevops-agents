@@ -36,7 +36,7 @@ Write-Output $GHCRToken | docker login ghcr.io -u $RepoOwner --password-stdin
 docker pull "ghcr.io/${RepoOwner}/${RepoName}:${ImageTag}"
 
 # Run the Docker container with environment variables
-docker run -d `
+docker run -it `
     -e AZP_URL=$AZP_URL `
     -e AZP_TOKEN=$AZP_TOKEN `
     -e AZP_POOL=$AZP_POOL `
