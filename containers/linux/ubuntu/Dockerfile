@@ -106,8 +106,8 @@ RUN pwsh -Command Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
 
 
 RUN git clone --depth=1 https://github.com/tfutils/tfenv.git ${AZP_AGENT_DIR}/.tfenv && \
-    tfenv install latest && \
-    tfenv use latest
+    tfenv install && \
+    tfenv use
 
 # Install Packer Env
 RUN git clone https://github.com/iamhsa/pkenv.git ${AZP_AGENT_DIR}/.pkenv && \
