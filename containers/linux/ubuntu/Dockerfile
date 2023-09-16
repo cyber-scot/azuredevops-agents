@@ -120,7 +120,7 @@ COPY start.sh /home/${NORMAL_USER}/start.sh
 
 RUN chown -R ${NORMAL_USER}:${NORMAL_USER} /opt && \
     chown -R ${NORMAL_USER}:${NORMAL_USER} /home/${NORMAL_USER} && \
-    chmod +x start.sh && \
+    chmod +x /home/${NORMAL_USER}/start.sh && \
     apt-get update && \
     apt-get autoremove -y && \
     apt-get clean && \
