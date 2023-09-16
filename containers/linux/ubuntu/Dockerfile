@@ -37,7 +37,7 @@ ENV PYENV_ROOT ${AZP_AGENT_DIR}/.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 #Set path vars
-ENV PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt:/opt/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.local/bin:/home/${NORMAL_USER}/.local:${AZP_AGENT_DIR}:${AZP_AGENT_DIR}/.tfenv:${AZP_AGENT_DIR}/.tfenv/bin:${AZP_AGENT_DIR}/.pkenv:${AZP_AGENT_DIR}/.pkenv/bin:/${AZP_AGENT_DIR}/.pyenv:${AZP_AGENT_DIR}/.pyenv/bin:${AZP_AGENT_DIR}/.pyenv/shims:/home/${NORMAL_USER}/.local/bin"
+ENV PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt:/opt/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.local/bin:/home/${NORMAL_USER}/.local:${AZP_AGENT_DIR}:${AZP_AGENT_DIR}/.tfenv:${AZP_AGENT_DIR}/.tfenv/bin:${AZP_AGENT_DIR}/.pkenv:${AZP_AGENT_DIR}/.pkenv/bin:${AZP_AGENT_DIR}/.pyenv:${AZP_AGENT_DIR}/.pyenv/bin:${AZP_AGENT_DIR}/.pyenv/shims:/home/${NORMAL_USER}/.local/bin"
 ENV PATHVAR="PATH=${PATH}"
 
 USER root
