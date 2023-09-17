@@ -75,5 +75,4 @@ RUN scoop install terraform packer ; \
 #Use Powershell Core instead of 5
 SHELL ["pwsh", "-Command"]
 
-
 CMD C:/azp/start.ps1
