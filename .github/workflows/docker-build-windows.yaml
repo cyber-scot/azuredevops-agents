@@ -1,0 +1,34 @@
+name: Monthly Build and Push Docker Image with Script
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # This will run at 00:00 on the 1st of every month
+  workflow_dispatch:
+jobs:
+  docker-build:
+    name: 'Docker Build'
+    runs-on: windows-latest
+    env:
+      working_directory: containers/windows/servercore
+
+    # Use the pwsh shell regardless whether the GitHub Actions runner is windows-latest
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: ${{ env.working_directory }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to GitHub Container Registry
+        run: |
+          Write-Output "${{ secrets.CyberScotGhAdminPat }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+
+      - name: Build Docker image
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}-windows:latest .
+
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/${{ github.repository }}-windows:latest

@@ -47,3 +47,26 @@ docker run -d \
 The provided PowerShell script is designed to automate the process of pulling the Docker image from the GitHub Container Registry (GHCR) and running it. The script checks for the necessary environment variables or parameters and ensures they are set before pulling and running the container.
 
 To use the script, set the required environment variables on your machine or pass them as parameters when running the script. Then execute the script to pull the Docker image and run the container with the specified configurations.
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
